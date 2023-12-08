@@ -26,12 +26,12 @@
     "nprogress": "^0.2.0",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.0",
-    "vue": "^3.3.10",
+    "vue": "^3.3.11",
     "vue-i18n": "^9.8.0",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
-    "@iconify-json/mdi": "^1.1.59",
+    "@iconify-json/mdi": "^1.1.60",
     "@intlify/unplugin-vue-i18n": "^1.5.0",
     "@types/node": "^20.10.4",
     "@types/nprogress": "^0.2.3",
