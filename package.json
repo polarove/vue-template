@@ -11,7 +11,7 @@
     "update-auto": "npx npm-check-updates -u && yarn",
     "commit-auto": "npx npm-check-updates -u && yarn && git add . && git commit -m \"chore: update dependencies\" && git push",
     "deploy-init": "vue-tsc && vite build --base /vue-template && cd dist && git init && git add . && git commit -m \"deploy\" && git branch gh-pages && git checkout gh-pages && git push -f",
-    "deploy": "vue-tsc && vite build --base /vue-template && cd dist && git add . && git commit -m \"deploy\" && git push -f"
+    "deploy": "git commit -am 'sync' && git push origin && vue-tsc && vite build --base /vue-template && cd dist && git add . && git commit -m \"deploy\" && git push -f"
   },
   "dependencies": {
     "@iconify-json/ep": "^1.1.13",
