@@ -204,11 +204,11 @@ input {
 
 input.small {
   height: 1.7em;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 input.default {
   height: 2em;
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 input.large {
   height: 2.3em;
