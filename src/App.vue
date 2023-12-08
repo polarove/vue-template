@@ -1,7 +1,7 @@
 <template>
-    <el-config-provider :locale="ui_locale">
-        <RouterView />
-    </el-config-provider>
+  <el-config-provider :locale="ui_locale">
+    <RouterView />
+  </el-config-provider>
 </template>
 
 <script setup lang="ts">
@@ -13,12 +13,10 @@ const locale_store = LocaleStore()
 const { locale: global_locale } = useI18n()
 global_locale.value = locale_store.getLocale
 
-console.log(import.meta.env.VITE_APP_BASE_API)
-
 // load locale for ui framework
 const ui_locale = computed(() => {
-    return useSupportedUILocale.find(
-        (item: SupportedUILocale) => item.language === locale_store.getLocale
-    )?.locale
+  return useSupportedUILocale.find(
+    (item: SupportedUILocale) => item.language === locale_store.getLocale
+  )?.locale
 })
 </script>
