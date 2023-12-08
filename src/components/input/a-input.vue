@@ -7,7 +7,12 @@
       id="input"
       placeholder=" "
     />
-    <label for="input" class="placeholder">{{ label }}</label>
+    <label
+      for="input"
+      class="placeholder"
+      :style="{ backgroundColor: labelBgColor }"
+      >{{ label }}</label
+    >
   </div>
 </template>
 
@@ -29,6 +34,10 @@ defineProps({
     type: String,
     default: 'label',
   },
+  labelBgColor: {
+    type: String,
+    required: true,
+  },
 })
 
 const emit = defineEmits(['update:modelValue'])
@@ -46,6 +55,7 @@ const verificate = (event: Event) => {
     width: 100%;
     height: 40px;
     border: 1px solid var(--el-border-color-light);
+    background-color: var(--el-input-bg-color);
     border-radius: 4px;
     padding: 0 0.5em;
     font-size: 1em;
@@ -62,14 +72,14 @@ const verificate = (event: Event) => {
       transform: translateY(-75%) scale(0.88);
     }
   }
+
   .placeholder {
     position: absolute;
     top: 50%;
     left: 0.5rem;
     transform: translateY(-50%);
-    color: #999;
+    color: var(--el-text-color-placeholder);
     padding: 0 0.2em;
-    background-color: var(--el-bg-color);
     transition: all 0.2s ease-in-out;
     pointer-events: none;
   }

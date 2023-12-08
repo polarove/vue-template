@@ -51,6 +51,10 @@ const props = defineProps({
     type: String,
     default: 'text',
   },
+  autoSubmit: {
+    type: Boolean,
+    default: true,
+  },
 })
 
 // 最终用于提交的结果
@@ -134,7 +138,10 @@ const updateResult = () => {
     .map((item) => item.value)
     .join('')
   emit('update:modelValue', result.value)
-  if (result.value.length === props.count * props.cellUnit) {
+  if (
+    result.value.length === props.count * props.cellUnit &&
+    props.autoSubmit
+  ) {
     emit('submit', result.value)
   }
 }
