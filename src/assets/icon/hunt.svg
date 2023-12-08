@@ -1,0 +1,38 @@
+<svg id="hunt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27 23.62">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+    <clipPath id="clip-path" transform="translate(-1.05 -2.37)">
+      <polygon class="cls-1" points="12.54 15.84 12.54 29 0 29 0 0 29 0 29 29 16.68 29 16.56 15.8 12.54 15.84"/>
+    </clipPath>
+  </defs>
+  <g class="cls-2">
+    <g>
+      <g>
+        <path class="cls-3" d="M14.56,13l-11,11" transform="translate(-1.05 -2.37)"/>
+        <path d="M13.14,11.59l-11,11A2,2,0,0,0,5,25.41l11-11a2,2,0,0,0,0-2.82,2,2,0,0,0-2.83,0Z" transform="translate(-1.05 -2.37)"/>
+      </g>
+      <path d="M13.14,14.41l11,11A2,2,0,1,0,27,22.59l-11-11a2,2,0,1,0-2.83,2.82Z" transform="translate(-1.05 -2.37)"/>
+    </g>
+    <g>
+      <g>
+        <path class="cls-3" d="M12.56,9.4l-11,11" transform="translate(-1.05 -2.37)"/>
+        <path d="M12.2,9.05l-11,11a.5.5,0,0,0,.71.7l11-11a.5.5,0,0,0-.71-.7Z" transform="translate(-1.05 -2.37)"/>
+      </g>
+      <path d="M16.2,9.75l11,11a.5.5,0,0,0,.71-.7l-11-11a.5.5,0,0,0-.71.7Z" transform="translate(-1.05 -2.37)"/>
+    </g>
+    <path d="M13,9.43V2.85a.5.5,0,0,0-1,0V9.43a.5.5,0,0,0,1,0Z" transform="translate(-1.05 -2.37)"/>
+    <path d="M17,9.38V3a.5.5,0,0,0-1,0V9.38a.5.5,0,0,0,1,0Z" transform="translate(-1.05 -2.37)"/>
+  </g>
+</svg>

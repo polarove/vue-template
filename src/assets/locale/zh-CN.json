@@ -1,0 +1,50 @@
+{
+    "lang": "zh-CN",
+    "join-us": {
+        "name": "加入我们"
+    },
+    "follow-us": {
+        "name": "关注我们",
+        "github": "@:platform.github",
+        "bilibili": "@:platform.bilibili",
+        "knowledge-planet": "@:platform.knowledge-planet"
+    },
+    "manual": {
+        "name": "用户手册",
+        "terms": "服务条款",
+        "privacy": "隐私政策",
+        "eula": "最终用户许可协议",
+        "how-tos": "如何使用"
+    },
+    "funding": {
+        "name": "赞助者",
+        "details": "详情",
+        "sponsor": "赞助",
+        "contact": "联系我们"
+    },
+    "platform": {
+        "github": "GitHub",
+        "bilibili": "bilibili",
+        "knowledge-planet": "知识星球"
+    },
+    "team": {
+        "name": "组队"
+    },
+    "wiki": {
+        "name": "百科"
+    },
+    "forum": {
+        "name": "论坛"
+    },
+    "countdown": {
+        "name": "倒计时"
+    },
+    "search": {
+        "placeholder": "在{type}中搜索"
+    },
+    "server": {
+        "name": "服务器",
+        "en": "国际服",
+        "cn": "国服"
+    }
+}

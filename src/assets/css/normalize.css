@@ -1,0 +1,18 @@
+* {
+    box-sizing: inherit;
+    scroll-behavior: auto;
+}
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--el-text-color);
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
