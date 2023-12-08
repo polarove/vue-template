@@ -1,5 +1,5 @@
 <template>
-  <div class="h-100vh w-80% ma-auto">
+  <div class="w-80% ma-auto pb-200px pt-100px">
     <section class="flex-between items-center">
       <h1>compoenents - input</h1>
       <wt-theme class="text-size-[2em]" />
@@ -74,6 +74,19 @@
         </div>
       </el-card>
     </section>
+    <section class="flex-between items-center">
+      <h1>compoenents - card</h1>
+      <wt-theme class="text-size-[2em]" />
+    </section>
+    <section flex-center-col>
+      <rotate-card c-p @click="profile()" type="square">
+        <el-image
+          src="https://avatars.githubusercontent.com/u/95893742?v=4"
+          alt="polarove"
+          fit="cover"
+        />
+      </rotate-card>
+    </section>
   </div>
 </template>
 
@@ -96,6 +109,10 @@ const submit_emitted = ref(false)
 const submit = () => {
   console.log('submit')
   submit_emitted.value = true
+}
+
+const profile = () => {
+  window.open('https://github.com/polarove')
 }
 </script>
 

@@ -12,6 +12,7 @@ declare module 'vue' {
     BInput: typeof import('./src/components/input/b-input.vue')['default']
     ElCard: typeof import('element-plus/es')['ElCard']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
+    ElImage: typeof import('element-plus/es')['ElImage']
     ElInputNumber: typeof import('element-plus/es')['ElInputNumber']
     ElRadioButton: typeof import('element-plus/es')['ElRadioButton']
     ElRadioGroup: typeof import('element-plus/es')['ElRadioGroup']

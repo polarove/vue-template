@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import nProgress from 'nprogress'
-console.log(import.meta.env.DEV)
 
 const routes = [
   {

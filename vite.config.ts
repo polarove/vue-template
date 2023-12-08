@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import Markdown from 'unplugin-vue-markdown/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
@@ -38,7 +39,12 @@ export default defineConfig({
   },
 
   plugins: [
-    vue(),
+    vue({
+      include: [/\.vue$/, /\.md$/], // <-- allows Vue to compile Markdown files
+    }),
+    Markdown({
+      /* options */
+    }),
     UnoCSS(),
     AutoImport({
       imports: [
@@ -129,6 +135,7 @@ export default defineConfig({
       '@api': resolve(__dirname, 'src/api'),
       '@class': resolve(__dirname, 'src/class'),
       '@typings': resolve(__dirname, 'src/typings'),
+      '@md': resolve(__dirname, 'src/md'),
       '@router': resolve(__dirname, 'src/router'),
       '@store': resolve(__dirname, 'src/store'),
     },
