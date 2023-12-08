@@ -52,19 +52,19 @@
           font-color="0 0 0 #000"
           ref="form"
         />
-        <div mt-4>
+        <div mt-4 flex items-center>
           单元格内字符个数：
           <el-input-number v-model="unit" :step="1" :min="1" step-strictly />
         </div>
-        <div mt-4>
+        <div mt-4 flex items-center>
           单元格个数：
           <el-input-number v-model="count" :step="1" :min="1" step-strictly />
         </div>
-        <div mt-4>
+        <div mt-4 flex items-center>
           自动提交：
           <el-switch v-model="autoSubmit" />
         </div>
-        <div mt-4>
+        <div mt-4 flex items-center>
           大小：
           <el-radio-group v-model="size">
             <el-radio-button label="small" />
