@@ -27,6 +27,7 @@ declare module 'vue' {
     UserAvatar: typeof import('./src/components/user/user-avatar.vue')['default']
     UserAvatarName: typeof import('./src/components/user/user-avatar-name.vue')['default']
     UserName: typeof import('./src/components/user/user-name.vue')['default']
+    VerificationCodeInput: typeof import('./src/components/input/verification-code-input.vue')['default']
     WtFillScreen: typeof import('./src/components/layout/wt-fill-screen.vue')['default']
     WtLocale: typeof import('./src/components/wt-locale.vue')['default']
     WtTab: typeof import('./src/components/interaction/tab/wt-tab.vue')['default']

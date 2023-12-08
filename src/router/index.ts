@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import nProgress from 'nprogress'
+console.log(import.meta.env.DEV)
+
 const routes = [
   {
     path: '/',
@@ -8,6 +10,14 @@ const routes = [
   },
 ]
 
+const createRoutes = () => {
+  if (import.meta.env.PROD) {
+    return routes.map((route) => {
+      route.path = `/${import.meta.env.VITE_APP_NAME}${route.path}`
+    })
+  }
+}
+createRoutes()
 const router = createRouter({
   history: createWebHistory(),
   routes,

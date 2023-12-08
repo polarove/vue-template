@@ -21,20 +21,18 @@ import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 // fs
 import path, { resolve } from 'path'
 import fs from 'fs'
-
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/',
   server: {
     port: 67,
     https: {
       cert: fs.readFileSync(
-        path.resolve(__dirname, 'src/assets/ssl/home/dev.pem')
-        // path.resolve(__dirname, 'src/assets/ssl/co/dev.pem')
+        // path.resolve(__dirname, 'src/assets/ssl/home/dev.pem')
+        path.resolve(__dirname, 'src/assets/ssl/co/dev.pem')
       ),
       key: fs.readFileSync(
-        path.resolve(__dirname, 'src/assets/ssl/home/dev-key.pem')
-        // path.resolve(__dirname, 'src/assets/ssl/co/dev-key.pem')
+        // path.resolve(__dirname, 'src/assets/ssl/home/dev-key.pem')
+        path.resolve(__dirname, 'src/assets/ssl/co/dev-key.pem')
       ),
     },
   },
