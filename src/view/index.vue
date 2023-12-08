@@ -74,6 +74,7 @@
         </div>
       </el-card>
     </section>
+    <el-divider />
     <section class="flex-between items-center">
       <h1>compoenents - card</h1>
       <wt-theme class="text-size-[2em]" />
