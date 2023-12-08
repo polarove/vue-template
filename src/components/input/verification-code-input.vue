@@ -7,9 +7,15 @@
       :key="index"
       @input="constraintInput($event as InputEvent, order)"
       @focus="currentPosition = order"
+      style="min-width: 2em"
+      :class="{
+        default: size === 'default',
+        small: size === 'small',
+        large: size === 'large',
+      }"
       :style="{
-        width: cellWidth,
-        height: cellHeight,
+        width: cellUnit * 0.8 + 'em',
+
         textShadow: fontColor,
       }"
     />
@@ -25,6 +31,10 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  size: {
+    type: String,
+    default: 'default',
+  },
   count: {
     type: Number,
     default: 6,
@@ -35,21 +45,9 @@ const props = defineProps({
     default: 1,
     min: 1,
   },
-  cellWidth: {
-    type: String,
-    default: '2em',
-  },
-  cellHeight: {
-    type: String,
-    default: '2em',
-  },
   fontColor: {
     type: String,
     default: '',
-  },
-  type: {
-    type: String,
-    default: 'text',
   },
   autoSubmit: {
     type: Boolean,
@@ -192,17 +190,29 @@ defineExpose({
 
 <style scoped>
 input {
-  margin: 0.2rem;
-  border-radius: 0.5rem;
+  margin: 0.2em 0.4em;
+  border-radius: 0.25em;
   color: transparent;
   border: none;
   outline: 0;
   text-align: center;
-  font-size: 1.5em;
   font-weight: bold;
   background-color: transparent;
   box-shadow: 0 0 0 1px var(--el-border-color-light);
   transition: all 0.2s ease-in-out;
+}
+
+input.small {
+  height: 1.7em;
+  font-size: 1.2em;
+}
+input.default {
+  height: 2em;
+  font-size: 1.5em;
+}
+input.large {
+  height: 2.3em;
+  font-size: 1.7em;
 }
 input:focus {
   box-shadow: 0 0 0 1px var(--el-color-primary) inset;

@@ -46,6 +46,7 @@
           :count="count"
           :cell-unit="unit"
           :auto-submit="autoSubmit"
+          :size="size"
           @submit="submit"
           @check="testNumber"
           font-color="0 0 0 #000"
@@ -63,6 +64,14 @@
           自动提交：
           <el-switch v-model="autoSubmit" />
         </div>
+        <div mt-4>
+          大小：
+          <el-radio-group v-model="size">
+            <el-radio-button label="small" />
+            <el-radio-button label="default" />
+            <el-radio-button label="large" />
+          </el-radio-group>
+        </div>
       </el-card>
     </section>
   </div>
@@ -77,6 +86,7 @@ const unit = ref<number>(2)
 const count = ref<number>(10)
 const autoSubmit = ref<boolean>(false)
 const form = ref()
+const size = ref<string>('default')
 
 const testNumber = (str: string, callback: Function) => {
   callback(/^\d+$/.test(str))
