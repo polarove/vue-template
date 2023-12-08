@@ -1,7 +1,7 @@
 <template>
   <div class="h-100vh w-80% ma-auto">
     <section class="flex-between items-center">
-      <h1>src/components - 模板自带的组件</h1>
+      <h1>compoenents - input</h1>
       <wt-theme class="text-size-[2em]" />
     </section>
     <section>

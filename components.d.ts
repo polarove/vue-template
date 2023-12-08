@@ -10,6 +10,7 @@ declare module 'vue' {
     AInput: typeof import('./src/components/input/a-input.vue')['default']
     Beian: typeof import('./src/components/beian/beian.vue')['default']
     BInput: typeof import('./src/components/input/b-input.vue')['default']
+    ElButton: typeof import('element-plus/es')['ElButton']
     ElCard: typeof import('element-plus/es')['ElCard']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     ElInputNumber: typeof import('element-plus/es')['ElInputNumber']
