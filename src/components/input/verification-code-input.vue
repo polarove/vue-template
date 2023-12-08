@@ -2,7 +2,6 @@
   <form :modelValue="modelValue">
     <input
       v-for="(order, index) in count"
-      class="inputUnit"
       @keyup="Backspace($event, order)"
       :ref="(el: Element | ComponentPublicInstance | null) => setInputRef(order, el)"
       :key="index"
@@ -48,9 +47,9 @@ const props = defineProps({
     type: String,
     default: '',
   },
-  focusOn: {
-    type: Number,
-    default: 1,
+  type: {
+    type: String,
+    default: 'text',
   },
 })
 
@@ -164,12 +163,7 @@ const getRef = (index: number) => {
 
 // 自动聚焦
 const initComponent = () => {
-  if (props.focusOn > props.count) {
-    autoFocus(currentPosition.value)
-  } else {
-    currentPosition.value = props.focusOn
-    autoFocus(currentPosition.value)
-  }
+  autoFocus(currentPosition.value)
 }
 
 // 组件加载时自动聚焦
@@ -190,9 +184,6 @@ defineExpose({
 </script>
 
 <style scoped>
-.inputUnit:focus {
-  box-shadow: 0 0 0 1px #449bf2 inset;
-}
 input {
   margin: 0.2rem;
   border-radius: 0.5rem;
@@ -203,6 +194,10 @@ input {
   font-size: 1.5em;
   font-weight: bold;
   background-color: transparent;
-  box-shadow: 0 0 0 1px #e4e7ed inset;
+  box-shadow: 0 0 0 1px var(--el-border-color-light);
+  transition: all 0.2s ease-in-out;
+}
+input:focus {
+  box-shadow: 0 0 0 1px var(--el-color-primary) inset;
 }
 </style>

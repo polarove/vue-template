@@ -1,12 +1,22 @@
 <template>
   <div class="input_container">
-    <input :type="type" id="input" placeholder=" " />
+    <input
+      :type="type"
+      :value="modelValue"
+      @input="verificate($event)"
+      id="input"
+      placeholder=" "
+    />
     <label for="input" class="placeholder">{{ label }}</label>
   </div>
 </template>
 
 <script setup lang="ts">
 defineProps({
+  modelValue: {
+    type: String,
+    default: '',
+  },
   size: {
     type: String,
     default: 'default',
@@ -20,6 +30,12 @@ defineProps({
     default: 'label',
   },
 })
+
+const emit = defineEmits(['update:modelValue'])
+
+const verificate = (event: Event) => {
+  emit('update:modelValue', (event.target as HTMLInputElement).value)
+}
 </script>
 
 <style lang="scss" scoped>

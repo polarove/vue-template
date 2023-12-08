@@ -5,8 +5,8 @@
         :type="type"
         id="input"
         placeholder=" "
-        v-model="query"
-        @input="check()"
+        :value="modelValue"
+        @input="verificate($event)"
         @keyup.enter="search()"
       />
       <div class="underline"></div>
@@ -21,20 +21,11 @@
 </template>
 
 <script setup lang="ts">
-const query = ref<string | null>()
-const check = () => {
-  console.log(query.value)
-}
-const search = () => {
-  if (!query.value) return
-  useRouter().replace({
-    path: '/search/result',
-    query: {
-      keyword: query.value,
-    },
-  })
-}
-defineProps({
+const props = defineProps({
+  modelValue: {
+    type: String,
+    default: '',
+  },
   size: {
     type: String,
     default: 'default',
@@ -48,6 +39,22 @@ defineProps({
     default: 'label',
   },
 })
+
+const emit = defineEmits(['update:modelValue'])
+
+const verificate = (event: Event) => {
+  emit('update:modelValue', (event.target as HTMLInputElement).value)
+}
+
+const search = () => {
+  if (!props.modelValue) return
+  useRouter().replace({
+    path: '/search/result',
+    query: {
+      keyword: props.modelValue,
+    },
+  })
+}
 </script>
 
 <style lang="scss" scoped>
@@ -83,6 +90,7 @@ defineProps({
       &:not(:placeholder-shown) ~ label {
         top: 0;
         transform: translateY(-65%) scale(0.88);
+        color: var(--el-color-primary);
       }
     }
     .underline {
