@@ -7,6 +7,7 @@
     "d": "vite",
     "b": "vue-tsc && vite build",
     "p": "vite preview",
+    "start": "yarn && yarn d",
     "update-manual": "yarn upgrade-interactive --latest",
     "update-auto": "npx npm-check-updates -u && yarn",
     "commit-auto": "npx npm-check-updates -u && yarn && git add . && git commit -m \"chore: update dependencies\" && git push",

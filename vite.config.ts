@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import Markdown from 'unplugin-vue-markdown/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
@@ -22,6 +21,7 @@ import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 // fs
 import path, { resolve } from 'path'
 import fs from 'fs'
+
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
@@ -39,12 +39,7 @@ export default defineConfig({
   },
 
   plugins: [
-    vue({
-      include: [/\.vue$/, /\.md$/], // <-- allows Vue to compile Markdown files
-    }),
-    Markdown({
-      /* options */
-    }),
+    vue(),
     UnoCSS(),
     AutoImport({
       imports: [
