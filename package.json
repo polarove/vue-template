@@ -8,7 +8,8 @@
     "b": "vue-tsc && vite build",
     "p": "vite preview",
     "update-manual": "yarn upgrade-interactive --latest",
-    "update-auto": "npx npm-check-updates -u && yarn"
+    "update-auto": "npx npm-check-updates -u && yarn",
+    "commit-auto": "npx npm-check-updates -u && yarn && git add . && git commit -m \"chore: update dependencies\" && git push"
   },
   "dependencies": {
     "@iconify-json/ep": "^1.1.13",
