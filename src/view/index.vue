@@ -89,6 +89,11 @@
       </rotate-card>
     </section>
   </div>
+  <div class="footer">
+    <el-text>
+      Github@<a href="https://github.com/polarove">polarove</a>
+    </el-text>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -124,5 +129,9 @@ const profile = () => {
   .check {
     color: var(--el-color-success) !important;
   }
+}
+.footer {
+  height: 3em;
+  text-align: center;
 }
 </style>
