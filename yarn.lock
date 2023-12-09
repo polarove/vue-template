@@ -763,38 +763,38 @@
   resolved "https://registry.yarnpkg.com/@types/web-bluetooth/-/web-bluetooth-0.0.20.tgz#f066abfcd1cbe66267cdbbf0de010d8a41b41597"
   integrity sha512-g9gZnnXVq7gM7v3tJCWV/qw7w+KeOlSHAhgF9RytFyifW6AF61hdT2ucrYhPq9hLs5JIryeupHV3qGk95dH9ow==
 
-"@unhead/dom@1.8.8":
-  version "1.8.8"
-  resolved "https://registry.yarnpkg.com/@unhead/dom/-/dom-1.8.8.tgz#f055d46bd381c2baca515bf9b8ca6190e087be4b"
-  integrity sha512-KRtn+tvA83lEtKrtZD85XmqW04fcytVuNKLUpPBzhJvsxB3v7gozw0nu46e3EpbO3TGJjLlLd6brNHQY6WLWfA==
+"@unhead/dom@1.8.9":
+  version "1.8.9"
+  resolved "https://registry.yarnpkg.com/@unhead/dom/-/dom-1.8.9.tgz#cc1598f5c4e5879f671760c4b2c1e78102c33fa2"
+  integrity sha512-qY4CUVNKEM7lEAcTz5t71QYca+NXgUY5RwhSzB6sBBzZxQTiFOeTVKC6uWXU0N+3jBUdP/zdD3iN1JIjziDlng==
   dependencies:
-    "@unhead/schema" "1.8.8"
-    "@unhead/shared" "1.8.8"
+    "@unhead/schema" "1.8.9"
+    "@unhead/shared" "1.8.9"
 
-"@unhead/schema@1.8.8":
-  version "1.8.8"
-  resolved "https://registry.yarnpkg.com/@unhead/schema/-/schema-1.8.8.tgz#853c15a41057b17e22085d7569bdd41cca36aec0"
-  integrity sha512-xuhNW4osVNLW1yQSbdInZ8YGiXVTi1gjF8rK1E4VnODpWLg8XOq0OpoCbdIlCH4X4A0Ee0UQGRyzkuuVZlrSsQ==
+"@unhead/schema@1.8.9":
+  version "1.8.9"
+  resolved "https://registry.yarnpkg.com/@unhead/schema/-/schema-1.8.9.tgz#f311fe119fe33b48381a2c3b0866b2b0ff883e10"
+  integrity sha512-Cumjt2uLfBMEXflvq7Nk8KNqa/JS4MlRGWkjXx/uUXJ1vUeQqeMV8o3hrnRvDDoTXr9LwPapTMUbtClN3TSBgw==
   dependencies:
     hookable "^5.5.3"
     zhead "^2.2.4"
 
-"@unhead/shared@1.8.8":
-  version "1.8.8"
-  resolved "https://registry.yarnpkg.com/@unhead/shared/-/shared-1.8.8.tgz#40850667a5d92c41185bd50e5ccc923aab083a33"
-  integrity sha512-LoIJUDgmOzxoRHSIf29w/wc+IzKN2XvGiQC2dZZrYoTjOOzodf75609PEW5bhx2aHio38k9F+6BnD3KDiJ7IIg==
+"@unhead/shared@1.8.9":
+  version "1.8.9"
+  resolved "https://registry.yarnpkg.com/@unhead/shared/-/shared-1.8.9.tgz#5d2b1279a0ceed49cb35efca44ef01224d9b7791"
+  integrity sha512-0o4+CBCi9EnTKPF6cEuLacnUHUkF0u/FfiKrWnKWUiB8wTD1v3UCf5ZCrNCjuJmKHTqj6ZtZ2hIfXsqWfc+3tA==
   dependencies:
-    "@unhead/schema" "1.8.8"
+    "@unhead/schema" "1.8.9"
 
-"@unhead/vue@^1.8.8":
-  version "1.8.8"
-  resolved "https://registry.yarnpkg.com/@unhead/vue/-/vue-1.8.8.tgz#cb64b06928c73bd82588acf7b9327a5d76563210"
-  integrity sha512-isHpVnSSE5SP+ObsZG/i+Jq9tAQ2u1AbGrktXKmL7P5FRxwPjhATYnJFdGpxXeXfuaFgRFKzGKs29xo4MMVODw==
+"@unhead/vue@^1.8.9":
+  version "1.8.9"
+  resolved "https://registry.yarnpkg.com/@unhead/vue/-/vue-1.8.9.tgz#55a8b068f94d5683ce5c0149946b462e8b9a9a28"
+  integrity sha512-sL1d2IRBZd5rjzhgTYni2DiociSpt+Cfz3iVWKb0EZwQHgg0GzV8Hkoj5TjZYZow6EjDSPRfVPXDwOwxkVOgug==
   dependencies:
-    "@unhead/schema" "1.8.8"
-    "@unhead/shared" "1.8.8"
+    "@unhead/schema" "1.8.9"
+    "@unhead/shared" "1.8.9"
     hookable "^5.5.3"
-    unhead "1.8.8"
+    unhead "1.8.9"
 
 "@unocss/astro@0.58.0":
   version "0.58.0"
@@ -2570,14 +2570,14 @@ undici-types@~5.26.4:
   resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-5.26.5.tgz#bcd539893d00b56e964fd2657a4866b221a65617"
   integrity sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==
 
-unhead@1.8.8:
-  version "1.8.8"
-  resolved "https://registry.yarnpkg.com/unhead/-/unhead-1.8.8.tgz#66e294b85931a4a4bcd5b7450d8f28fd5ac8765a"
-  integrity sha512-SfUJ2kjz1NcfvdM+uEAlN11h31wHqMg0HZ5jriuRPjMCj5O7lPs4uSMdBUYh3KEo0uLKrW76FM85ONXkyZfm3g==
+unhead@1.8.9:
+  version "1.8.9"
+  resolved "https://registry.yarnpkg.com/unhead/-/unhead-1.8.9.tgz#f13ecee175381d634d085e52a7945c6e7937b56d"
+  integrity sha512-qqCNmA4KOEDjcl+OtRZTllGehXewcQ31zbHjvhl/jqCs2MfRcZoxFW1y7A4Y4BgR/O7PI89K+GoWGcxK3gn64Q==
   dependencies:
-    "@unhead/dom" "1.8.8"
-    "@unhead/schema" "1.8.8"
-    "@unhead/shared" "1.8.8"
+    "@unhead/dom" "1.8.9"
+    "@unhead/schema" "1.8.9"
+    "@unhead/shared" "1.8.9"
     hookable "^5.5.3"
 
 unicorn-magic@^0.1.0:
@@ -2702,10 +2702,10 @@ update-browserslist-db@^1.0.13:
     escalade "^3.1.1"
     picocolors "^1.0.0"
 
-vite@^5.0.6:
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-5.0.6.tgz#f9e13503a4c5ccd67312c67803dec921f3bdea7c"
-  integrity sha512-MD3joyAEBtV7QZPl2JVVUai6zHms3YOmLR+BpMzLlX2Yzjfcc4gTgNi09d/Rua3F4EtC8zdwPU8eQYyib4vVMQ==
+vite@^5.0.7:
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-5.0.7.tgz#ad081d735f6769f76b556818500bdafb72c3fe93"
+  integrity sha512-B4T4rJCDPihrQo2B+h1MbeGL/k/GMAHzhQ8S0LjQ142s6/+l3hHTT095ORvsshj4QCkoWu3Xtmob5mazvakaOw==
   dependencies:
     esbuild "^0.19.3"
     postcss "^8.4.32"
