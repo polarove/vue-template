@@ -28,7 +28,7 @@
     "moment-timezone": "^0.5.43",
     "nprogress": "^0.2.0",
     "pinia": "^2.1.7",
-    "pinia-plugin-persistedstate": "^3.2.0",
+    "pinia-plugin-persistedstate": "^3.2.1",
     "vue": "^3.3.12",
     "vue-i18n": "^9.8.0",
     "vue-router": "^4.2.5"
