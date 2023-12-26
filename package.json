@@ -38,7 +38,7 @@
     "@intlify/unplugin-vue-i18n": "^2.0.0",
     "@types/node": "^20.10.5",
     "@types/nprogress": "^0.2.3",
-    "@vitejs/plugin-vue": "^4.5.2",
+    "@vitejs/plugin-vue": "^5.0.0",
     "postcss": "^8.4.32",
     "sass": "^1.69.5",
     "typescript": "^5.3.3",
