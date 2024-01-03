@@ -40,7 +40,7 @@
     "@types/nprogress": "^0.2.3",
     "@vitejs/plugin-vue": "^5.0.2",
     "postcss": "^8.4.32",
-    "sass": "^1.69.6",
+    "sass": "^1.69.7",
     "typescript": "^5.3.3",
     "unocss": "^0.58.3",
     "unplugin-auto-import": "^0.17.3",
