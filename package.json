@@ -23,7 +23,7 @@
     "@vueuse/motion": "^2.0.0",
     "animate.css": "^4.1.1",
     "axios": "^1.6.7",
-    "element-plus": "^2.5.3",
+    "element-plus": "^2.5.5",
     "moment": "^2.30.1",
     "moment-timezone": "^0.5.44",
     "nprogress": "^0.2.0",
