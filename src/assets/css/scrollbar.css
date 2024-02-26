@@ -17,5 +17,5 @@
     background: #555;
 }
 ::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, and Opera */
+    display: block; /* Chrome, Safari, and Opera */
 }
