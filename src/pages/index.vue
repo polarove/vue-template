@@ -76,6 +76,14 @@
     </section>
     <el-divider />
     <section class="flex-between items-center">
+      <h1>toolcat - utils</h1>
+      <wt-theme class="text-size-[2em]" />
+    </section>
+    <section style="font-family: system-ui">
+      StrUtil.isEmpty(''): {{ StrUtil.isEmpty('') }}
+    </section>
+    <el-divider />
+    <section class="flex-between items-center">
       <h1>compoenents - card</h1>
       <wt-theme class="text-size-[2em]" />
     </section>
@@ -97,6 +105,7 @@
 </template>
 
 <script setup lang="ts">
+import { StrUtil } from '@polaris_liu/toolcat'
 const ainput = ref<string>('')
 const binput = ref<string>('')
 
