@@ -111,7 +111,7 @@ export default defineConfig({
                 additionalData: `
                     @use "@scss/element/common/override.scss" as common;
                     @use "@scss/element/dark/override.scss" as dark;
-                    @use "@scss/index.scss" as *;            
+                    @use "@scss/variable.scss" as *;            
                 `,
             },
         },
@@ -124,7 +124,7 @@ export default defineConfig({
             '@img': resolve(__dirname, 'src/assets/img'),
             '@css': resolve(__dirname, 'src/assets/css'),
             '@scss': resolve(__dirname, 'src/assets/scss'),
-            '@view': resolve(__dirname, 'src/view'),
+            '@pages': resolve(__dirname, 'src/pages'),
             '@composable': resolve(__dirname, 'src/composable'),
             '@util': resolve(__dirname, 'src/util'),
             '@api': resolve(__dirname, 'src/api'),

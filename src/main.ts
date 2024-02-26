@@ -40,6 +40,7 @@ import 'element-plus/theme-chalk/display.css'
 
 // nprogress
 import 'nprogress/nprogress.css'
+import '@css/nprogress.css'
 
 // animate.css
 import 'animate.css'

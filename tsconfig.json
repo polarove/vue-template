@@ -1,52 +1,52 @@
 {
-  "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "skipLibCheck": true,
+    "compilerOptions": {
+        "target": "ES2020",
+        "useDefineForClassFields": true,
+        "module": "ESNext",
+        "lib": ["ES2020", "DOM", "DOM.Iterable"],
+        "skipLibCheck": true,
 
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "preserve",
+        /* Bundler mode */
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "preserve",
 
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
+        /* Linting */
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
 
-    /* alias */
-    "paths": {
-      "@/*": ["./src/*"],
-      "@icon/*": ["./src/assets/icon/*"],
-      "@img/*": ["./src/assets/img/*"],
-      "@css/*": ["./src/assets/css/*"],
-      "@scss/*": ["./src/assets/scss/*"],
-      "@view/*": ["./src/view/*"],
-      "@composable/*": ["./src/composable/*"],
-      "@util/*": ["./src/util/*"],
-      "@api/*": ["./src/api/*"],
-      "@class/*": ["./src/class/*"],
-      "@typings/*": ["./src/typings/*"],
-      "@md/*": ["./src/md"],
-      "@router": ["./src/router"],
-      "@store": ["./src/store"]
+        /* alias */
+        "paths": {
+            "@/*": ["./src/*"],
+            "@icon/*": ["./src/assets/icon/*"],
+            "@img/*": ["./src/assets/img/*"],
+            "@css/*": ["./src/assets/css/*"],
+            "@scss/*": ["./src/assets/scss/*"],
+            "@pages/*": ["./src/pages/*"],
+            "@composable/*": ["./src/composable/*"],
+            "@util/*": ["./src/util/*"],
+            "@api/*": ["./src/api/*"],
+            "@class/*": ["./src/class/*"],
+            "@typings/*": ["./src/typings/*"],
+            "@md/*": ["./src/md"],
+            "@router": ["./src/router"],
+            "@store": ["./src/store"]
+        },
+
+        // type files for element-plus
+        "types": ["element-plus/global"]
     },
-
-    // type files for element-plus
-    "types": ["element-plus/global"]
-  },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "src/**/*.d.ts",
-    "./auto-imports.d.ts"
-  ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue",
+        "src/**/*.d.ts",
+        "./auto-imports.d.ts"
+    ],
+    "references": [{ "path": "./tsconfig.node.json" }]
 }
