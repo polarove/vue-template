@@ -53,13 +53,7 @@ export default defineConfig({
         unheadVueComposablesImports
       ],
       resolvers: [ElementPlusResolver()],
-      dirs: [
-        'src/store',
-        'src/composable/**',
-        'src/util/**',
-        'src/api/*.ts',
-        'src/enums/**'
-      ]
+      dirs: ['src/store', 'src/composables/**', 'src/api/*.ts', 'src/enums/**']
     }),
     VueI18nPlugin({
       include: [path.resolve(__dirname, './src/assets/locale/**.json')]
@@ -123,12 +117,10 @@ export default defineConfig({
       '@css': resolve(__dirname, 'src/assets/css'),
       '@scss': resolve(__dirname, 'src/assets/scss'),
       '@pages': resolve(__dirname, 'src/pages'),
-      '@composable': resolve(__dirname, 'src/composable'),
-      '@util': resolve(__dirname, 'src/util'),
+      '@composables': resolve(__dirname, 'src/composables'),
       '@api': resolve(__dirname, 'src/api'),
       '@class': resolve(__dirname, 'src/class'),
       '@typings': resolve(__dirname, 'src/typings'),
-      '@md': resolve(__dirname, 'src/md'),
       '@router': resolve(__dirname, 'src/router'),
       '@store': resolve(__dirname, 'src/store')
     }
