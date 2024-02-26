@@ -3,7 +3,7 @@ import nProgress from 'nprogress'
 
 const routes = [
   {
-    path: '/',
+    path: '/vue-template',
     name: 'index',
     component: () => import('@pages/index.vue')
   }
