@@ -35,7 +35,7 @@ export default defineConfig({
   //         ),
   //     },
   // },
-  base: 'vue-template',
+  base: '/vue-template',
   plugins: [
     vue(),
     UnoCSS(),
