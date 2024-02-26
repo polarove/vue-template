@@ -28,20 +28,27 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    requirements: ['node']
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
-      - name: Setup project
+
+      - name: Install dependencies
         run: yarn
+
       - name: Build Pages
         run: yarn b
-      - name: Upload artifact
+
+      - name: Upload production-ready build files
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload the built artifacts
+          name: production-files
           path: 'dist'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
