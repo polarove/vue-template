@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@iconify-json/ep": "^1.1.14",
-    "@polaris_liu/toolcat": "^1.0.1",
+    "@polaris_liu/toolcat": "^1.0.12",
     "@unhead/vue": "^1.8.10",
     "@vueuse/core": "^10.7.2",
     "@vueuse/motion": "^2.0.0",
