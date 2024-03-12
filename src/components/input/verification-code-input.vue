@@ -11,12 +11,12 @@
       :class="{
         default: size === 'default',
         small: size === 'small',
-        large: size === 'large',
+        large: size === 'large'
       }"
       :style="{
         width: cellUnit * 0.8 + 'em',
 
-        textShadow: fontColor,
+        textShadow: fontColor
       }"
     />
   </form>
@@ -29,30 +29,34 @@ const emit = defineEmits(['update:modelValue', 'submit', 'check'])
 const props = defineProps({
   modelValue: {
     type: String,
-    default: '',
+    default: ''
   },
   size: {
     type: String,
-    default: 'default',
+    default: 'default'
   },
   count: {
     type: Number,
     default: 6,
-    min: 1,
+    min: 1
   },
   cellUnit: {
     type: Number,
     default: 1,
-    min: 1,
+    min: 1
   },
   fontColor: {
     type: String,
-    default: '',
+    default: ''
+  },
+  autoFocus: {
+    type: Boolean,
+    default: true
   },
   autoSubmit: {
     type: Boolean,
-    default: true,
-  },
+    default: true
+  }
 })
 
 // 最终用于提交的结果
@@ -72,11 +76,13 @@ const setInputRef = (
   })
 }
 
-// 自动聚焦输入框
-const autoFocus = (index: number) => {
-  nextTick(() => {
-    refs[index]?.focus()
-  })
+// 聚焦输入框
+const focusOn = (index: number) => {
+  if (props.autoFocus) {
+    nextTick(() => {
+      refs[index]?.focus()
+    })
+  }
 }
 
 const checkInput = (target: HTMLInputElement) => {
@@ -168,7 +174,7 @@ const getRef = (index: number) => {
 
 // 自动聚焦
 const initComponent = () => {
-  autoFocus(currentPosition.value)
+  focusOn(currentPosition.value)
 }
 
 // 组件加载时自动聚焦
@@ -184,7 +190,7 @@ onUnmounted(() => {
 defineExpose({
   refs,
   getRef,
-  currentPosition,
+  currentPosition
 })
 </script>
 

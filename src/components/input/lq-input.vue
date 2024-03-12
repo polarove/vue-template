@@ -1,7 +1,7 @@
 <template>
-  <div class="lq-input__container" :style="{ height: height }">
+  <div class="lq-input__container" :style="{ height: height, width: width }">
     <div class="lq-input__affix">
-      <slot name="affix"> +86 </slot>
+      <slot name="affix"> </slot>
     </div>
     <div class="lq-input" :class="border">
       <input
@@ -16,11 +16,11 @@
       />
       <label :for="label"> {{ label }} </label>
       <div class="lq-input__message">
-        <slot name="message">ds</slot>
+        <slot name="message"></slot>
       </div>
-    </div>
-    <div class="lq-input__suffix">
-      <slot name="suffix"> suffix </slot>
+      <div class="lq-input__suffix">
+        <slot name="suffix"> </slot>
+      </div>
     </div>
   </div>
 </template>
@@ -32,6 +32,7 @@ withDefaults(
     label?: string
     type?: string
     height?: string
+    width?: string
     autoFocus?: boolean
     border?: 'underline' | 'border'
   }>(),
@@ -39,6 +40,7 @@ withDefaults(
     label: 'label',
     type: 'text',
     height: '30px',
+    width: '100%',
     autoFocus: false,
     border: 'border'
   }
@@ -70,6 +72,8 @@ const emit = defineEmits(['input', 'focus', 'blur'])
     border-bottom: 1.5px solid var(--el-color-primary);
   }
   .lq-input.border > input {
+    padding-left: 10px;
+    border-radius: 6px;
     border: 1px solid var(--el-border-color-light);
   }
   .lq-input.border > input:focus {
@@ -102,10 +106,7 @@ const emit = defineEmits(['input', 'focus', 'blur'])
     color: var(--el-color-primary);
   }
   .lq-input__affix {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    transform: translateY(25%);
     padding-right: 0.125rem;
   }
   .lq-input__suffix {
@@ -117,7 +118,7 @@ const emit = defineEmits(['input', 'focus', 'blur'])
 }
 .lq-input__message {
   font-size: 0.88rem;
-  margin-top: 4px;
+  margin-top: 2px;
   float: left;
 }
 </style>

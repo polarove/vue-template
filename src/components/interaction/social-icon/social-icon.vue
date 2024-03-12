@@ -10,7 +10,7 @@ withDefaults(
     icon?: string
     url?: string
     target?: '_blank' | '_self'
-    size: string
+    size?: string
   }>(),
   {
     target: '_blank',
