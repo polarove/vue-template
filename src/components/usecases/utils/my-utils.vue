@@ -16,19 +16,24 @@
       <wt-theme class="text-size-[2em]" />
     </div>
   </section>
-  <section style="font-family: system-ui">
-    <div>Hutool 风格的工具类，由 typescript 编写而成</div>
-    <div class="mt-0.67em">
-      - StrUtil.isEmpty(''): {{ StrUtil.isEmpty('') }}
+  <el-card style="font-family: system-ui">
+    <template #header> Hutool 风格的工具类，由 typescript 编写而成 </template>
+    <div class="mb-2em">
+      <p class="mt-0.67em">- StrUtil.isEmpty(''): {{ StrUtil.isEmpty(str) }}</p>
+      <lq-input v-model="str" label="输入任意字符串"></lq-input>
     </div>
-    <div class="mt-0.67em">
-      - ObjUtil.isEmpty({}): {{ ObjUtil.isEmpty({}) }}
+    <div class="mb-2em">
+      <p class="mt-0.67em">- StrUtil.isBlank(''): {{ StrUtil.isBlank(ef) }}</p>
+      <lq-input v-model="ef" label="输入任意字符串"></lq-input>
     </div>
-  </section>
+    <p class="mt-0.67em">- ObjUtil.isEmpty({}): {{ ObjUtil.isEmpty({}) }}</p>
+  </el-card>
 </template>
 
 <script lang="ts" setup>
 import { StrUtil, ObjUtil } from '@polaris_liu/toolcat'
+const str = ref('')
+const ef = ref('')
 </script>
 
 <style lang="scss" scoped></style>
