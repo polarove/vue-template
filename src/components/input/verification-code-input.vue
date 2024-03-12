@@ -15,7 +15,6 @@
       }"
       :style="{
         width: cellUnit * 0.8 + 'em',
-
         textShadow: fontColor
       }"
     />
@@ -26,38 +25,25 @@
 import { ref, nextTick, onMounted, onUnmounted } from 'vue'
 import type { ComponentPublicInstance } from 'vue'
 const emit = defineEmits(['update:modelValue', 'submit', 'check'])
-const props = defineProps({
-  modelValue: {
-    type: String,
-    default: ''
-  },
-  size: {
-    type: String,
-    default: 'default'
-  },
-  count: {
-    type: Number,
-    default: 6,
-    min: 1
-  },
-  cellUnit: {
-    type: Number,
-    default: 1,
-    min: 1
-  },
-  fontColor: {
-    type: String,
-    default: ''
-  },
-  autoFocus: {
-    type: Boolean,
-    default: true
-  },
-  autoSubmit: {
-    type: Boolean,
-    default: true
+const props = withDefaults(
+  defineProps<{
+    modelValue: string
+    size?: string
+    count: number
+    cellUnit: number
+    fontColor: string
+    autoFocus: boolean
+    autoSubmit: boolean
+  }>(),
+  {
+    size: 'default',
+    count: 6,
+    cellUnit: 1,
+    fontColor: '',
+    autoFocus: true,
+    autoSubmit: true
   }
-})
+)
 
 // 最终用于提交的结果
 const result = ref('')
@@ -109,9 +95,7 @@ const constraintInput = (event: InputEvent, order: number) => {
       refs[`${nextOrder}`]?.focus()
     }
     updateResult()
-  } else {
-    console.error('order is not defined')
-  }
+  } else console.error('order is not defined')
 }
 
 // 控制黏贴
@@ -168,24 +152,16 @@ const Backspace = (event: KeyboardEvent, order: number) => {
 window.addEventListener('paste', constraintPaste)
 
 // 获取指定元素的ref
-const getRef = (index: number) => {
-  return refs[`${index}`]
-}
+const getRef = (index: number) => refs[`${index}`]
 
 // 自动聚焦
-const initComponent = () => {
-  focusOn(currentPosition.value)
-}
+const initComponent = () => focusOn(currentPosition.value)
 
 // 组件加载时自动聚焦
-onMounted(() => {
-  initComponent()
-})
+onMounted(() => initComponent())
 
 // 组件卸载时移除黏贴监听
-onUnmounted(() => {
-  window.removeEventListener('paste', constraintPaste)
-})
+onUnmounted(() => window.removeEventListener('paste', constraintPaste))
 
 defineExpose({
   refs,

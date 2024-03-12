@@ -21,7 +21,7 @@
       :auto-submit="autoSubmit"
       :size="size"
       @submit="submit"
-      @check="testNumber"
+      @check="test"
       font-color="0 0 0 #000"
       ref="form"
     />
@@ -32,6 +32,10 @@
     <div mt-4 flex items-center>
       单元格个数：
       <el-input-number v-model="count" :step="1" :min="1" step-strictly />
+    </div>
+    <div mt-4 flex items-center>
+      Number Only：
+      <el-switch v-model="numberOnly" />
     </div>
     <div mt-4 flex items-center>
       自动提交：
@@ -53,11 +57,13 @@ const code = ref<string>('')
 const unit = ref<number>(1)
 const count = ref<number>(6)
 const autoSubmit = ref<boolean>(true)
+const numberOnly = ref<boolean>(true)
 const form = ref()
 const size = ref<string>('default')
 
-const testNumber = (str: string, callback: Function) => {
-  callback(/^\d+$/.test(str))
+const test = (str: string, validator: Function) => {
+  if (numberOnly.value) return validator(/^\d+$/.test(str))
+  else return validator(/^\w+$/.test(str))
 }
 
 const submit_emitted = ref(false)
