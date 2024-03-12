@@ -9,12 +9,18 @@
     <div class="mt-0.525em">
       <el-text>From 2023 - Present</el-text>
       <span class="opacity-50">&ensp;&ensp;|&ensp;&ensp;</span>
-      <el-text><span class="i-mdi:MIT"></span>MIT LICENSE</el-text>
+      <el-text>
+        <span :class="isD ? 'color-red' : ''">❤</span>
+        <span>&nbsp;MIT LICENSE&nbsp;</span>
+        <span :class="isD ? 'color-red' : ''">❤</span>
+      </el-text>
     </div>
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const isD = computed(() => Math.random() > 0.5)
+</script>
 
 <style lang="scss" scoped>
 .footer {
