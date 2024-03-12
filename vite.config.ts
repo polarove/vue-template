@@ -123,7 +123,6 @@ export default defineConfig({
       '@class': resolve(__dirname, 'src/class'),
       '@typings': resolve(__dirname, 'src/typings'),
       '@router': resolve(__dirname, 'src/router'),
-      '@enums': resolve(__dirname, 'src/enums'),
       '@store': resolve(__dirname, 'src/store')
     }
   }

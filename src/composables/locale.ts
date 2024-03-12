@@ -1,5 +1,4 @@
 import { en, zhCn, type Language } from 'element-plus/es/locale/index.mjs'
-import { LOCALES } from '@enums/locales'
 
 export interface Locale {
   elementPlus: Language

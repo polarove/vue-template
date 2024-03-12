@@ -1,6 +1,6 @@
 <template>
   <section class="flex-between items-center">
-    <h1>compoenents - card</h1>
+    <h1>components - card</h1>
     <div>
       <social-icon
         url="https://github.com/polarove"
