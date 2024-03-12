@@ -8,11 +8,7 @@
       @input="constraintInput($event as InputEvent, order)"
       @focus="currentPosition = order"
       style="min-width: 2em"
-      :class="{
-        default: size === 'default',
-        small: size === 'small',
-        large: size === 'large'
-      }"
+      :class="size"
       :style="{
         width: cellUnit * 0.8 + 'em',
         textShadow: fontColor
@@ -28,7 +24,7 @@ const emit = defineEmits(['update:modelValue', 'submit', 'check'])
 const props = withDefaults(
   defineProps<{
     modelValue: string
-    size?: string
+    size?: 'small' | 'default' | 'large'
     count: number
     cellUnit: number
     fontColor: string
