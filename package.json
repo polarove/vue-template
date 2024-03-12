@@ -9,7 +9,7 @@
     "b": "vue-tsc && vite build",
     "p": "vite preview",
     "test": "echo \"Error: no test specified\"",
-    "deploy": "pnpm b && node build/post-build-vue.js",
+    "de": "pnpm b && node src/build/post-build-vue.js",
     "prepare": "husky"
   },
   "dependencies": {
