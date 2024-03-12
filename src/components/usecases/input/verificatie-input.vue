@@ -59,7 +59,7 @@ const count = ref<number>(6)
 const autoSubmit = ref<boolean>(true)
 const numberOnly = ref<boolean>(true)
 const form = ref()
-const size = ref<string>('default')
+const size = ref<'default' | 'small' | 'large'>('default')
 
 const test = (str: string, validator: Function) => {
   if (numberOnly.value) return validator(/^\d+$/.test(str))

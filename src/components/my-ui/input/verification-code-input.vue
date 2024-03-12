@@ -21,10 +21,11 @@
 import { ref, nextTick, onMounted, onUnmounted } from 'vue'
 import type { ComponentPublicInstance } from 'vue'
 const emit = defineEmits(['update:modelValue', 'submit', 'check'])
+type Size = 'default' | 'small' | 'large'
 const props = withDefaults(
   defineProps<{
     modelValue: string
-    size?: 'small' | 'default' | 'large'
+    size?: Size
     count: number
     cellUnit: number
     fontColor: string
