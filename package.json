@@ -12,17 +12,17 @@
     "@iconify-json/ep": "latest",
     "@iconify-json/mdi": "latest",
     "@polaris_liu/toolcat": "latest",
-    "@unhead/vue": "^1.8.10",
+    "@unhead/vue": "latest",
     "@vueuse/core": "latest",
     "@vueuse/motion": "latest",
-    "axios": "^1.6.7",
+    "axios": "latest",
     "element-plus": "latest",
-    "nprogress": "^0.2.0",
+    "nprogress": "latest",
     "pinia": "latest",
     "pinia-plugin-persistedstate": "latest",
-    "vue": "^3.4.15",
-    "vue-i18n": "^9.9.1",
-    "vue-router": "^4.2.5"
+    "vue": "latest",
+    "vue-i18n": "latest",
+    "vue-router": "latest"
   },
   "devDependencies": {
     "@intlify/unplugin-vue-i18n": "latest",

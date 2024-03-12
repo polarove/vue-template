@@ -15,7 +15,7 @@ dependencies:
     specifier: latest
     version: 1.0.12(typescript@5.4.2)
   '@unhead/vue':
-    specifier: ^1.8.10
+    specifier: latest
     version: 1.8.13(vue@3.4.21)
   '@vueuse/core':
     specifier: latest
@@ -24,13 +24,13 @@ dependencies:
     specifier: latest
     version: 2.1.0(vue@3.4.21)
   axios:
-    specifier: ^1.6.7
+    specifier: latest
     version: 1.6.7
   element-plus:
     specifier: latest
     version: 2.6.1(vue@3.4.21)
   nprogress:
-    specifier: ^0.2.0
+    specifier: latest
     version: 0.2.0
   pinia:
     specifier: latest
@@ -39,13 +39,13 @@ dependencies:
     specifier: latest
     version: 3.2.1(pinia@2.1.7)
   vue:
-    specifier: ^3.4.15
+    specifier: latest
     version: 3.4.21(typescript@5.4.2)
   vue-i18n:
-    specifier: ^9.9.1
+    specifier: latest
     version: 9.10.1(vue@3.4.21)
   vue-router:
-    specifier: ^4.2.5
+    specifier: latest
     version: 4.3.0(vue@3.4.21)
 
 devDependencies:
