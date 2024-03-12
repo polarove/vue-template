@@ -1,4 +1,4 @@
-export type response<T> = {
+export type Restful<T> = {
   code: number
   message: string
   success: boolean

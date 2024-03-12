@@ -5,10 +5,14 @@
       style="width: 1em; margin-right: 5px"
       alt="beian"
     />
-    <span class="text-size-[0.88em]">闽ICP备2022001180号-4</span>
+    <span class="text-size-[0.88em]">{{ code }}</span>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps<{
+  code: string
+}>()
+</script>
 
 <style lang="scss" scoped></style>

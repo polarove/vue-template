@@ -1,19 +1,11 @@
-import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
-import en from 'element-plus/dist/locale/en.mjs'
-import type { SupportedUILocale } from '@typings/type/locale'
+import { en, zhCn, type Language } from 'element-plus/es/locale/index.mjs'
+import { LOCALES } from '@enums/locales'
 
-export const useSupportedLocale: Map<string, string> = new Map([
-    ['en', 'English'],
-    ['zh-CN', '简体中文'],
-])
+export interface Locale {
+  elementPlus: Language
+  name: string
+}
 
-export const useSupportedUILocale: SupportedUILocale[] = [
-    {
-        language: 'en',
-        locale: en,
-    },
-    {
-        language: 'zh-CN',
-        locale: zhCn,
-    },
-]
+export const localeMap = new Map<string, Locale>()
+localeMap.set(LOCALES.ZH_CN, { elementPlus: zhCn, name: '简体中文' })
+localeMap.set(LOCALES.EN_US, { elementPlus: en, name: 'English' })

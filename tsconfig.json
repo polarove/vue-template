@@ -33,6 +33,7 @@
       "@class/*": ["./src/class/*"],
       "@typings/*": ["./src/typings/*"],
       "@router": ["./src/router"],
+      "@enums": ["./src/enums"],
       "@store": ["./src/store"]
     },
 

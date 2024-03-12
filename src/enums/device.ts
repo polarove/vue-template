@@ -1,4 +1,4 @@
-export enum Platform {
+export enum PLATFORMS {
   Mobile = 'mobile',
   Desktop = 'desktop',
   NotSupported = 'NotSupported',

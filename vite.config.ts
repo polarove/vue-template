@@ -20,7 +20,7 @@ import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 
 // fs
 import path, { resolve } from 'path'
-import fs from 'fs'
+// import fs from 'fs'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -46,14 +46,15 @@ export default defineConfig({
         '@vueuse/core',
         'vue-i18n',
         {
-          from: './src/assets/typings/type/response',
-          imports: ['response'],
+          from: './src/assets/typings/type/restful',
+          imports: ['restful'],
           type: true
         },
+
         unheadVueComposablesImports
       ],
       resolvers: [ElementPlusResolver()],
-      dirs: ['src/store', 'src/composables/**', 'src/api/*.ts', 'src/enums/**']
+      dirs: ['src/store', 'src/composables/**', 'src/api/**', 'src/enums/**']
     }),
     VueI18nPlugin({
       include: [path.resolve(__dirname, './src/assets/locale/**.json')]
@@ -122,6 +123,7 @@ export default defineConfig({
       '@class': resolve(__dirname, 'src/class'),
       '@typings': resolve(__dirname, 'src/typings'),
       '@router': resolve(__dirname, 'src/router'),
+      '@enums': resolve(__dirname, 'src/enums'),
       '@store': resolve(__dirname, 'src/store')
     }
   }

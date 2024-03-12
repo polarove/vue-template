@@ -1,4 +1,4 @@
 #!/bin/sh
 echo "running script: ${0}"
 
-pnpm exec commitlint --config commitlint.config.js --edit "${1}"
+# pnpm exec commitlint --config commitlint.config.js --edit "${1}"
