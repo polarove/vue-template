@@ -2,7 +2,11 @@
   <section class="flex-between items-center">
     <h1>compoenents - input</h1>
     <div>
-      <span class="i-mdi:github my-github" @click="() => jumpGithub()"></span>
+      <social-icon
+        url="https://github.com/polarove/toolcat"
+        icon="i-mdi:github"
+        class="hover-color-primary"
+      />
       <wt-theme class="text-size-[2em]" />
     </div>
   </section>
@@ -93,9 +97,13 @@ const submit = () => {
   alert('submit!')
   submit_emitted.value = true
 }
-
-const jumpGithub = () => {
-  window.open('https://github.com/polarove')
-}
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.component-card {
+  margin-top: 2em;
+
+  .check {
+    color: var(--el-color-success) !important;
+  }
+}
+</style>

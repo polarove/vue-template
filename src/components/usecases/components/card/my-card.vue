@@ -1,9 +1,12 @@
 <template>
-  <el-divider />
   <section class="flex-between items-center">
     <h1>compoenents - card</h1>
     <div>
-      <social-icon url="https://github.com/polarove" icon="i-mdi:github" />
+      <social-icon
+        url="https://github.com/polarove"
+        class="hover-color-primary"
+        icon="i-mdi:github"
+      />
       <wt-theme class="text-size-[2em]" />
     </div>
   </section>
@@ -15,24 +18,6 @@
         fit="cover"
       />
     </rotate-card>
-  </section>
-  <el-divider />
-  <section class="flex-between items-center">
-    <h1>toolcat - utils</h1>
-    <div>
-      <social-icon
-        url="https://www.npmjs.com/package/@polaris_liu/toolcat"
-        icon="i-mdi:npm"
-        class="hover-color-primary"
-        size="3.5rem"
-      />
-      <social-icon
-        url="https://github.com/polarove/toolcat"
-        icon="i-mdi:github"
-        class="hover-color-primary"
-      />
-      <wt-theme class="text-size-[2em]" />
-    </div>
   </section>
 </template>
 

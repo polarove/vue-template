@@ -17,5 +17,8 @@
       color: var(--el-color-primary);
     }
   }
+  a {
+    color: var(--el-text-color-primary);
+  }
 }
 </style>
