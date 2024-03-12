@@ -19,11 +19,15 @@
   <el-card style="font-family: system-ui">
     <template #header> Hutool 风格的工具类，由 typescript 编写而成 </template>
     <div class="mb-2em">
-      <p class="mt-0.67em">- StrUtil.isEmpty(''): {{ StrUtil.isEmpty(str) }}</p>
+      <p class="mt-0.67em">
+        - StrUtil.isEmpty('{{ str }}'): {{ StrUtil.isEmpty(str) }}
+      </p>
       <lq-input v-model="str" label="输入任意字符串"></lq-input>
     </div>
     <div class="mb-2em">
-      <p class="mt-0.67em">- StrUtil.isBlank(''): {{ StrUtil.isBlank(ef) }}</p>
+      <p class="mt-0.67em">
+        - StrUtil.isBlank('{{ str }}'): {{ StrUtil.isBlank(ef) }}
+      </p>
       <lq-input v-model="ef" label="输入任意字符串"></lq-input>
     </div>
     <p class="mt-0.67em">- ObjUtil.isEmpty({}): {{ ObjUtil.isEmpty({}) }}</p>
