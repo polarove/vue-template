@@ -16,17 +16,16 @@
 </template>
 
 <script setup lang="ts">
-// @ts-ignore
 import { useElementTransform } from '@vueuse/motion'
 const props = defineProps({
   scale: {
     type: Number,
-    default: 15,
+    default: 15
   },
   type: {
     type: String,
-    default: 'square',
-  },
+    default: 'square'
+  }
 })
 
 const target = ref<HTMLElement | null>(null)

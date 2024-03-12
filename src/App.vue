@@ -1,5 +1,5 @@
 <template>
-  <el-config-provider :locale="epLocale" :config="config">
+  <el-config-provider :locale="epLocale" :message="config">
     <RouterView />
   </el-config-provider>
 </template>

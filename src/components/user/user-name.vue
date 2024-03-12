@@ -1,7 +1,7 @@
 <template>
-    <el-text>
-        <option-inline> 帅比 </option-inline>
-    </el-text>
+  <el-text>
+    <option-span> 帅比 </option-span>
+  </el-text>
 </template>
 
 <script setup lang="ts"></script>
