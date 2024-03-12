@@ -6,7 +6,8 @@
   "scripts": {
     "d": "vite --port 67",
     "b": "vue-tsc && vite build",
-    "p": "vite preview"
+    "p": "vite preview",
+    "deploy": "pnpm b && node build/post-build-vue.js"
   },
   "dependencies": {
     "@iconify-json/ep": "latest",
