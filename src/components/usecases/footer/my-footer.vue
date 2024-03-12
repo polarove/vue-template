@@ -6,7 +6,7 @@
       </el-text>
     </div>
 
-    <div class="mt-0.125em">
+    <div class="mt-0.525em">
       <el-text>From 2023 - Present</el-text>
       <span class="opacity-50">&ensp;&ensp;|&ensp;&ensp;</span>
       <el-text><span class="i-mdi:MIT"></span>MIT LICENSE</el-text>
