@@ -1,1 +1,1 @@
-echo "checking the commit message: ${1}"
+echo "checking the commit message: ${0}"
