@@ -6,6 +6,7 @@
     "d": "vite --port 67",
     "b": "vue-tsc && vite build",
     "p": "vite preview",
+    "test": "echo no test specified && exit 1",
     "deploy": "pnpm b && node build/post-build-vue.js",
     "prepare": "husky"
   },
