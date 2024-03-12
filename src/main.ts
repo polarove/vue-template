@@ -18,10 +18,10 @@ const unhead = createHead()
 // locale messages have been itegrated into vite-plugin-vue-i18n/messages
 import messages from '@intlify/unplugin-vue-i18n/messages'
 const i18n = createI18n({
-    legacy: false,
-    locale: 'zh-CN',
-    fallbackLocale: 'zh-CN',
-    messages,
+  legacy: false,
+  locale: 'zh-CN',
+  fallbackLocale: 'zh-CN',
+  messages
 })
 
 // vue-router
@@ -41,9 +41,6 @@ import 'element-plus/theme-chalk/display.css'
 // nprogress
 import 'nprogress/nprogress.css'
 import '@css/nprogress.css'
-
-// animate.css
-import 'animate.css'
 
 // unocss
 import 'virtual:uno.css'

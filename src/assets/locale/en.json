@@ -1,50 +1,15 @@
 {
-    "lang": "en",
-    "join-us": {
-        "name": "Join us"
-    },
-    "follow-us": {
-        "name": "Follow us",
-        "github": "@:platform.github",
-        "bilibili": "@:platform.bilibili",
-        "knowledge-planet": "@:platform.knowledge-planet"
-    },
-    "manual": {
-        "name": "User Manual",
-        "terms": "Terms of Service",
-        "privacy": "Privacy Policy",
-        "eula": "EULA",
-        "how-tos": "How-tos"
-    },
-    "funding": {
-        "name": "Sponsorship",
-        "details": "Details",
-        "sponsor": "Sponsor",
-        "contact": "Contact Us"
-    },
-    "platform": {
-        "github": "GitHub",
-        "bilibili": "bilibili",
-        "knowledge-planet": "Knowledge Planet"
-    },
-    "search": {
-        "placeholder": "seach in {type}"
-    },
-    "team": {
-        "name": "Team"
-    },
-    "wiki": {
-        "name": "Wiki"
-    },
-    "forum": {
-        "name": "Forum"
-    },
-    "countdown": {
-        "name": "Countdowns"
-    },
-    "server": {
-        "name": "Server",
-        "en": "EN",
-        "cn": "CN"
-    }
+  "lang": "en",
+  "join-us": {
+    "name": "Join us"
+  },
+  "follow-us": {
+    "name": "Follow us",
+    "github": "@:platform.github",
+    "bilibili": "@:platform.bilibili",
+    "knowledge-planet": "@:platform.knowledge-planet"
+  },
+  "search": {
+    "placeholder": "seach in {type}"
+  }
 }
