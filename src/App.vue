@@ -9,8 +9,6 @@ import { localeMap } from '@/composables/locale'
 import { useHead } from '@unhead/vue'
 import { StrUtil } from '@polaris_liu/toolcat'
 
-const LANG = 'app-language'
-
 const storeLocale = LocaleStore()
 const i18n = useI18n({
   useScope: 'global'

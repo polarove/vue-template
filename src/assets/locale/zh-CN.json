@@ -1,16 +1,5 @@
 {
   "lang": "zh-CN",
   "title": "标题",
-  "join-us": {
-    "name": "加入我们"
-  },
-  "follow-us": {
-    "name": "关注我们",
-    "github": "@:platform.github",
-    "bilibili": "@:platform.bilibili",
-    "knowledge-planet": "@:platform.knowledge-planet"
-  },
-  "search": {
-    "placeholder": "在{type}中搜索"
-  }
+  "components": "组件"
 }

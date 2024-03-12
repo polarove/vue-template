@@ -47,14 +47,20 @@ export default defineConfig({
         'vue-i18n',
         {
           from: './src/assets/typings/type/restful',
-          imports: ['restful'],
+          imports: ['Restful'],
           type: true
         },
 
         unheadVueComposablesImports
       ],
       resolvers: [ElementPlusResolver()],
-      dirs: ['src/store', 'src/composables/**', 'src/api/**', 'src/enums/**']
+      dirs: [
+        'src/store',
+        'src/composables/**',
+        'src/constants/**',
+        'src/api/**',
+        'src/enums/**'
+      ]
     }),
     VueI18nPlugin({
       include: [path.resolve(__dirname, './src/assets/locale/**.json')]

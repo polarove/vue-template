@@ -1,12 +1,13 @@
 <template>
   <section class="flex-between items-center">
-    <h1>components - card</h1>
+    <h1>{{ $t('components') }} - card</h1>
     <div>
       <social-icon
         url="https://github.com/polarove"
         class="hover-color-primary"
         icon="i-mdi:github"
       />
+      <wt-locale size="2.4em" class="mr-1em ml-1em" />
       <wt-theme class="text-size-[2em]" />
     </div>
   </section>
