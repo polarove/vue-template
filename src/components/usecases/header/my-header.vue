@@ -7,7 +7,7 @@
       </a>
     </div>
     <div>
-      A page that was deployed using a Dockerfile is available
+      A page which was deployed using a Dockerfile is available
       <a href="http://101.37.163.33:4856/" target="_self">
         here on my server
       </a>
