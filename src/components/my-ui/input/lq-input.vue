@@ -54,11 +54,13 @@ const emit = defineEmits(['input', 'focus', 'blur'])
   position: relative;
   display: flex;
   .lq-input {
-    width: 100%;
     position: relative;
+    width: 100%;
+    padding-right: 1rem;
   }
   .lq-input > input {
     height: 100%;
+    width: 100%;
     outline: none;
     border: none;
     color: var(--el-text-color-primary);
