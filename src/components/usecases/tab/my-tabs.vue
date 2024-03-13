@@ -16,21 +16,25 @@
         inactive-text="horizontal"
       ></el-switch>
     </div>
-    <lq-tab :tabs="tabs" :direction="direction" />
+    <lq-tab v-model="currentTab" :tabs="tabs" :direction="direction" />
   </el-card>
 </template>
 
 <script lang="ts" setup>
 import { Tab } from '@/components/my-ui/tab/lq-tab.vue'
 
-const currentTab = ref(0)
+const currentTab = ref()
 const tabs = reactive<Tab[]>([])
 const isVertical = ref(true)
 const direction = computed(() => (isVertical.value ? 'vertical' : 'horizontal'))
 
 const generateTab = () => {
   for (let index = 0; index < 10; index++) {
-    const newTab = { name: `tab_${index}`, value: `tab_value_${index}` }
+    const newTab = {
+      name: `tab_${index}`,
+      value: `tab_value_${index}`,
+      disabled: index % 2 === 1
+    }
     tabs.push(newTab)
   }
 }
