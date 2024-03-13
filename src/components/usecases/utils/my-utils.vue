@@ -1,13 +1,14 @@
 <template>
   <section class="flex-between items-center">
     <h1>toolcat - utils</h1>
-    <div>
+    <div class="flex-center">
       <social-icon
         url="https://www.npmjs.com/package/@polaris_liu/toolcat"
         icon="i-mdi:npm"
         class="hover-color-primary"
         size="3.5rem"
       />
+      <wt-locale size="2.4em" />
       <social-icon
         url="https://github.com/polarove/toolcat"
         icon="i-mdi:github"

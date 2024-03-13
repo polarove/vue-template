@@ -1,17 +1,17 @@
 <template>
   <div class="text-center mt-1em">
-    <div>
+    <p>
       This page was deployed through
       <a href="https://docs.github.com/en/actions" target="_self">
         Github Actions
       </a>
-    </div>
-    <div>
+    </p>
+    <p>
       A page which was deployed using a Dockerfile is available
       <a href="http://101.37.163.33:4856/" target="_self">
         here on my server
       </a>
-    </div>
+    </p>
   </div>
 </template>
 

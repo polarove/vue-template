@@ -6,6 +6,7 @@
         hover="cursor-pointer color-primary"
         :style="{ fontSize: size }"
         class="i-mdi:translate"
+        style="color: var(--el-text-color-primary)"
       />
 
       <template #dropdown>
