@@ -9,8 +9,8 @@ export default defineConfig({
       sm: '768px',
       md: '992px',
       lg: '1200px',
-      xl: '1920px',
-    },
+      xl: '1920px'
+    }
   },
   // 以下配置是为了可以在组件中更方便地使用图标<el-button icon="i-ep-lock"/>
   // 需要安装来自iconify-json/icon-set-name的图标才行, 如 iconify-json/ep
@@ -22,36 +22,42 @@ export default defineConfig({
             matcher: s,
             selector: (s: string) => {
               return s.startsWith('.') ? `${s.slice(1)},${s}` : s
-            },
+            }
           }
         }
-      },
-    },
+      }
+    }
   ],
   rules: [
     [
+      'text-small',
+      {
+        'font-size': '0.88rem'
+      }
+    ],
+    [
       'p-r',
       {
-        position: 'relative',
-      },
+        position: 'relative'
+      }
     ],
     [
       'p-a',
       {
-        position: 'absolute',
-      },
+        position: 'absolute'
+      }
     ],
     [
       'm-a',
       {
-        margin: 'auto',
-      },
+        margin: 'auto'
+      }
     ],
     [
       'c-p',
       {
-        cursor: 'pointer',
-      },
+        cursor: 'pointer'
+      }
     ],
     [
       'absolute-center',
@@ -60,73 +66,73 @@ export default defineConfig({
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        margin: 'auto',
-      },
+        margin: 'auto'
+      }
     ],
     [
       'flex-center',
       {
         display: 'flex',
         'justify-content': 'center',
-        'align-items': 'center',
-      },
+        'align-items': 'center'
+      }
     ],
     [
       'flex-end',
       {
         display: 'flex',
-        'justify-content': 'flex-end',
-      },
+        'justify-content': 'flex-end'
+      }
     ],
     [
       'flex-between',
       {
         display: 'flex',
-        'justify-content': 'space-between',
-      },
+        'justify-content': 'space-between'
+      }
     ],
     [
       'flex-around',
       {
         display: 'flex',
-        'justify-content': 'space-around',
-      },
+        'justify-content': 'space-around'
+      }
     ],
     [
       'flex-evenly',
       {
         display: 'flex',
-        'justify-content': 'space-evenly',
-      },
+        'justify-content': 'space-evenly'
+      }
     ],
     [
       'flex-start',
       {
         display: 'flex',
-        'justify-content': 'flex-start',
-      },
+        'justify-content': 'flex-start'
+      }
     ],
     [
       'flex-col',
       {
         display: 'flex',
-        'flex-direction': 'column',
-      },
+        'flex-direction': 'column'
+      }
     ],
     [
       'flex-col-start',
       {
         display: 'flex',
         'flex-direction': 'column',
-        'justify-content': 'flex-start',
-      },
+        'justify-content': 'flex-start'
+      }
     ],
     [
       'flex-col-reverse',
       {
         display: 'flex',
-        'flex-direction': 'column-reverse',
-      },
+        'flex-direction': 'column-reverse'
+      }
     ],
     [
       'flex-center-col',
@@ -134,15 +140,15 @@ export default defineConfig({
         display: 'flex',
         'flex-direction': 'column',
         'justify-content': 'center',
-        'align-items': 'center',
-      },
+        'align-items': 'center'
+      }
     ],
     [
       'color-primary',
       {
-        color: 'var(--el-color-primary)',
-      },
-    ],
+        color: 'var(--el-color-primary)'
+      }
+    ]
   ],
   presets: [
     // 预设规则
@@ -154,8 +160,8 @@ export default defineConfig({
     presetIcons({
       extraProperties: {
         display: 'inline-block',
-        'vertical-align': 'middle',
-      },
-    }),
-  ],
+        'vertical-align': 'middle'
+      }
+    })
+  ]
 })

@@ -3,7 +3,7 @@
     <div class="lq-tab__tabs">
       <div
         v-for="(tab, index) in tabs"
-        :class="{ active: currentTab?.index === index }"
+        :class="{ active: currentTab?.value === index }"
         :key="index"
         class="lq-tab__tab"
         :disabled="tab.disabled"
@@ -14,48 +14,47 @@
       </div>
       <div class="lq-tab__underline" ref="underlineRef"></div>
     </div>
-    <div class="lq-tab__view">fasf</div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ComponentPublicInstance } from 'vue'
+type direction = 'vertical' | 'horizontal'
 export interface Tab {
   name: string
-  value: string
+  value: number
   disabled: boolean
 }
 
-interface CurrentTab extends Tab {
-  index: number
-}
-
-type direction = 'vertical' | 'horizontal'
-
 const props = withDefaults(
   defineProps<{
-    modelValue: Tab | undefined
+    modelValue: number
     tabs: Array<Tab>
     direction?: direction
     underlineLength?: number
+    maxUnderlineLength?: number
   }>(),
   {
     direction: 'vertical',
-    underlineLength: 30
+    underlineLength: 30,
+    maxUnderlineLength: 50
   }
 )
 
-const currentTab = ref<CurrentTab>()
+const underlineWidthOnVerticalMode = props.underlineLength + 'px'
+const maxUnderlineWidth = props.maxUnderlineLength + 'px'
+const currentTab = ref<Tab>()
 const mark = ref(true)
 const underlineRef = shallowRef()
 const emit = defineEmits(['update:modelValue'])
-const refs: Record<number, HTMLDivElement> = {}
+const tabRefs: Record<number, HTMLDivElement> = {}
 
 const setupFirstTab = () => {
   const firstAvailableTab = props.tabs.find((item) => !item.disabled)
   if (firstAvailableTab) {
-    const index = props.tabs.indexOf(firstAvailableTab)
-    currentTab.value = { ...firstAvailableTab, index }
+    if (!isNaN(props.modelValue))
+      currentTab.value = props.tabs[props.modelValue]
+    else currentTab.value = firstAvailableTab
   }
 }
 
@@ -64,11 +63,15 @@ const setupRef = (
   el: Element | ComponentPublicInstance | null
 ) => {
   nextTick(() => {
-    refs[index] = el as HTMLDivElement
+    tabRefs[index] = el as HTMLDivElement
     if (mark.value) {
-      const firstEl = refs[currentTab.value!.index]
-      move(underlineRef.value!, caculateDistance(firstEl!))
-      emit('update:modelValue', currentTab.value)
+      setTimeout(() =>
+        move(
+          underlineRef.value!,
+          caculateDistance(tabRefs[currentTab.value!.value])
+        )
+      )
+      emit('update:modelValue', currentTab.value?.value)
       mark.value = false
     }
   })
@@ -77,8 +80,8 @@ const setupRef = (
 const handleTabClick = (tab: Tab, index: number) => {
   if (tab.disabled) return
   else {
-    saveTab({ ...tab, index })
-    move(underlineRef.value!, caculateDistance(refs[index]))
+    saveTab(tab)
+    move(underlineRef.value!, caculateDistance(tabRefs[index]))
   }
 }
 
@@ -91,15 +94,13 @@ const caculateDistance = (targetTab: HTMLDivElement) => {
       return distanceX
     case 'horizontal':
       const distanceY = targetTab.offsetTop + targetTab.clientHeight
-      console.log(distanceY)
-
       return distanceY
   }
 }
 
-const saveTab = (tab: CurrentTab) => {
+const saveTab = (tab: Tab) => {
   currentTab.value = tab
-  emit('update:modelValue', currentTab.value)
+  emit('update:modelValue', currentTab.value.value)
 }
 
 const move = (el: HTMLElement, distance: number) => {
@@ -108,7 +109,7 @@ const move = (el: HTMLElement, distance: number) => {
       el.style.transform = `translateX(${distance}px)`
       break
     case 'horizontal':
-      el.style.transform = `translateY(${distance}px)`
+      el.style.transform = `translateY(${distance + 5}px)`
       break
     default:
       break
@@ -119,12 +120,15 @@ watch(
   () => props.direction,
   () =>
     setTimeout(() => {
-      syncUnderline()
+      move(
+        underlineRef.value!,
+        caculateDistance(tabRefs[currentTab.value!.value])
+      )
     })
 )
 
 const syncUnderline = () => {
-  move(underlineRef.value!, caculateDistance(refs[currentTab.value!.index]))
+  move(underlineRef.value!, caculateDistance(tabRefs[currentTab.value!.value]))
 }
 
 onMounted(() => {
@@ -134,7 +138,13 @@ onMounted(() => {
 
 onUnmounted(() => window.removeEventListener('resize', syncUnderline))
 
-const underlineWidthOnVerticalMode = props.underlineLength + 'px'
+watch(
+  () => props.modelValue,
+  () => {
+    currentTab.value!.value = parseInt(props.modelValue.toString())
+    syncUnderline()
+  }
+)
 </script>
 
 <style lang="scss" scoped>
@@ -155,6 +165,16 @@ const underlineWidthOnVerticalMode = props.underlineLength + 'px'
     .lq-tab__tab.active {
       color: var(--el-color-primary);
     }
+    .lq-tab__underline {
+      display: block;
+      height: 2px;
+      background-color: var(--el-color-primary);
+      margin: auto;
+      position: absolute;
+      left: 0;
+      max-width: v-bind(maxUnderlineWidth);
+      transition: all 200ms ease-in-out;
+    }
   }
 }
 
@@ -165,21 +185,15 @@ const underlineWidthOnVerticalMode = props.underlineLength + 'px'
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
     .lq-tab__underline {
-      display: block;
-      height: 2px;
-      background-color: var(--el-color-primary);
-      margin: auto;
-      position: absolute;
       width: v-bind(underlineWidthOnVerticalMode);
       bottom: 0;
-      left: 0;
-      transition: all 200ms ease-in-out;
     }
   }
 }
 
 .lq-tab__container.horizontal {
   display: flex;
+  overflow: hidden;
   .lq-tab__tabs {
     margin-right: 1rem;
     .lq-tab__tab {
@@ -187,15 +201,8 @@ const underlineWidthOnVerticalMode = props.underlineLength + 'px'
     }
   }
   .lq-tab__underline {
-    display: block;
-    height: 2px;
-    background-color: var(--el-color-primary);
-    margin: auto;
-    position: absolute;
     top: 0;
     width: 100%;
-    left: 0;
-    transition: all 200ms ease-in-out;
   }
 }
 </style>
