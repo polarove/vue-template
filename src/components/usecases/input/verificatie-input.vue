@@ -9,7 +9,7 @@
           {{ code }}
         </el-text>
 
-        <el-text>input - 验证码输入组件</el-text>
+        <el-text>验证码输入组件</el-text>
       </div>
     </template>
 

@@ -6,6 +6,8 @@
     <el-divider />
     <my-input />
     <el-divider />
+    <my-tabs />
+    <el-divider />
     <my-utils />
     <el-divider />
     <my-footer />

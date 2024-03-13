@@ -3,7 +3,7 @@
     <template #header>
       <div class="flex-between">
         <el-text>value:&nbsp;{{ inputResult }}</el-text>
-        <el-text>input - 输入框</el-text>
+        <el-text>输入框</el-text>
       </div>
     </template>
 
