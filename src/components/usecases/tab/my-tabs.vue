@@ -25,7 +25,7 @@ import { Tab } from '@/components/my-ui/tab/lq-tab.vue'
 
 const currentTab = ref()
 const tabs = reactive<Tab[]>([])
-const isVertical = ref(true)
+const isVertical = ref(false)
 const direction = computed(() => (isVertical.value ? 'vertical' : 'horizontal'))
 
 const generateTab = () => {
