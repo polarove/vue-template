@@ -9,6 +9,11 @@
         <el-text>标签页（半成品）</el-text>
       </div>
     </template>
+    <div mb-4>
+      <span class="i-mdi:alert color-red text-size-[1.4rem]"></span>
+      警告，本组件还有 1/3
+      个错误没有处理，205936个bug没有解决，29349警告不知道从哪里蹦出来的。
+    </div>
     <div mb-4 flex items-center>
       <el-switch
         v-model="isVertical"
@@ -20,13 +25,9 @@
         v-model="fasf"
         active-text="禁用偶数"
         inactive-text="禁用奇数"
+        class="mr-4em"
       ></el-switch>
-    </div>
-    <div mb-4 flex items-center>
       <lq-input style="width: 200px" v-model="currentTab" label="当前tab" />
-      <span class="i-mdi:alert color-red text-size-[1.4rem]"></span
-      >警告，本组件还有 1/3
-      个错误没有处理，205936个bug没有解决，29349警告不知道从哪里蹦出来的。
     </div>
     <lq-tab
       v-model="currentTab"
